@@ -1,13 +1,15 @@
 {
+  buildPythonPackage,
   fetchPypi,
-  python3Packages,
+  protobuf,
+  setuptools,
 }:
 
 let
   pname = "discord-protos";
   version = "0.0.2";
 in
-python3Packages.buildPythonPackage {
+buildPythonPackage {
   inherit pname version;
   pyproject = true;
 
@@ -16,11 +18,9 @@ python3Packages.buildPythonPackage {
     hash = "sha256-I5U6BfMr7ttAtwjsS0V1MKYZaknI110zeukoKipByZc=";
   };
 
-  build-system = [ python3Packages.setuptools ];
+  build-system = [ setuptools ];
 
-  dependencies = with python3Packages; [
-    protobuf
-  ];
+  dependencies = [ protobuf ];
 
   doCheck = false;
 }

@@ -1,0 +1,16 @@
+[project]
+name = "alarm-msg"
+version = "0.1.0"
+description = "Add your description here"
+authors = [
+    { name = "PerchunPak", email = "git@perchun.it" }
+]
+requires-python = ">=3.14"
+dependencies = ["discord-py-self"]
+
+[project.scripts]
+alarm-msg = "alarm_msg:main"
+
+[build-system]
+requires = ["uv_build>=0.9.0,<0.10.0"]
+build-backend = "uv_build"

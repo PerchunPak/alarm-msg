@@ -1,14 +1,19 @@
 {
-  fetchFromGitHub,
-  python3Packages,
+  aiohttp,
+  audioop-lts,
+  buildPythonPackage,
+  curl-cffi,
   discord-protos,
+  fetchFromGitHub,
+  setuptools,
+  tzlocal,
 }:
 
 let
   pname = "discord.py-self";
   version = "0-unstable-2025-12-05";
 in
-python3Packages.buildPythonPackage {
+buildPythonPackage {
   inherit pname version;
   pyproject = true;
 
@@ -19,9 +24,9 @@ python3Packages.buildPythonPackage {
     hash = "sha256-Ylx/KSyVaSPasP3HaoLZ7xJ5jIW1tW2cwETE1/8Zd90=";
   };
 
-  build-system = [ python3Packages.setuptools ];
+  build-system = [ setuptools ];
 
-  dependencies = with python3Packages; [
+  dependencies = [
     aiohttp
     curl-cffi
     tzlocal
