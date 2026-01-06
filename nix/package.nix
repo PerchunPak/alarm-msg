@@ -8,5 +8,6 @@ python3Packages.buildPythonApplication {
 
   dependencies = with python3Packages; [
     discordpy-self
+    python-dotenv
   ];
 }
