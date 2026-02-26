@@ -11,7 +11,7 @@
 
 let
   pname = "discord.py-self";
-  version = "0-unstable-2025-12-05";
+  version = "2.1.0";
 in
 buildPythonPackage {
   inherit pname version;
@@ -20,8 +20,8 @@ buildPythonPackage {
   src = fetchFromGitHub {
     owner = "dolfies";
     repo = "discord.py-self";
-    rev = "21390fedece3601cd96d199e4595e2b546471495";
-    hash = "sha256-Ylx/KSyVaSPasP3HaoLZ7xJ5jIW1tW2cwETE1/8Zd90=";
+    tag = "v${version}";
+    hash = "sha256-jVz3uGU+4E5Awbk6ZYAsXvEpClNHm2QN1RpBTIiQTpE=";
   };
 
   build-system = [ setuptools ];
