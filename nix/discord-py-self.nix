@@ -34,7 +34,7 @@ buildPythonPackage {
     audioop-lts
   ];
 
-  # Only have integration tests with discord
+  # Has only integration tests with discord
   doCheck = false;
 
   pythonImportsCheck = [ "discord" ];

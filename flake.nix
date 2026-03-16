@@ -2,7 +2,7 @@
   description = "alarm when msg";
 
   inputs = {
-    nixpkgs.url = "github:PerchunPak/nixpkgs/curl-imp-upd";
+    nixpkgs.url = "github:NixOS/nixpkgs";
     flake-utils.url = "github:numtide/flake-utils";
   };
 
