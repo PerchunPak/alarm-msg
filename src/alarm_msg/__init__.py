@@ -53,12 +53,12 @@ class MyClient(discord.Client):
         self, member: Member, _before: VoiceState, after: VoiceState
     ) -> None:
         assert self.user is not None
-        if (
-            member.id != self.user.id
-            or after.channel is None
-            or not isinstance(after.channel, DMChannel)
-        ):
+        if member.id != self.user.id:
             return
+        if not isinstance(after.channel, DMChannel):
+            self._is_in_the_vc = False
+            return
+
         self._is_in_the_vc = after.channel.recipient.id == USER_ID
         self._in_voice_since = dt.datetime.now()
 
