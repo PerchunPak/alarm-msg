@@ -1,7 +1,7 @@
 [project]
 name = "alarm-msg"
 version = "0.1.0"
-description = "Add your description here"
+description = "Produce alarm-msg when specific person sends you a message"
 authors = [
     { name = "PerchunPak", email = "git@perchun.it" }
 ]
